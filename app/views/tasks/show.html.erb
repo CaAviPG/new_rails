@@ -1,0 +1,10 @@
+<h1><%= @task.title %></h1>
+<div><h2><%= @task.details %></h2></div>
+<h2><%= @task.completed %></h2>
+<h3></h3>
+<ul>
+<li><%= link_to("Edit the list", edit_task_path) %></li>
+<li><%= link_to "Borrar", task_path(@task), method: :delete,
+     data: {confirm: "Estás seguro?"} %></li>
+<li><%= link_to("Back to list", tasks_path) %></li>
+</ul>
